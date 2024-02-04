@@ -1,5 +1,16 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "editor.formatOnSave": true
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)", "\"(.*?)\""],
+    "clsx\\(([^)]*)\\)",
+    "cn\\(([^)]*)\\)"
+  ]
 }
