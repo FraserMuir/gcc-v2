@@ -1,4 +1,3 @@
-import { Toaster } from '~/components/ui/sonner';
 import type { Metadata } from 'next';
 import { Libre_Baskerville, Open_Sans } from 'next/font/google';
 
@@ -21,7 +20,6 @@ const Root = ({ children }: { children: React.ReactNode }) => {
     <html lang="en">
       <body className={`${openSans.variable} ${libreBaskerville.variable} font-sans`}>
         <main>{children}</main>
-        <Toaster />
       </body>
     </html>
   );

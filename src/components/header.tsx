@@ -40,14 +40,14 @@ const Header = () => {
       <div id="menu" className="flex grow justify-center">
         {pages.map((page) => (
           <div key={page.name} className="group relative max-w-52 grow items-center">
-            <div className="cursor-pointer p-4 text-center font-serif uppercase hover:bg-white">
-              {page.link ? <Link href={page.link}>{page.name}</Link> : <>{page.name}</>}
+            <div className="cursor-pointer border text-center font-serif uppercase group-hover:bg-white">
+              <HeaderItem page={page} />
             </div>
 
             {page.subItems && (
-              <div className="absolute z-10 hidden w-full bg-white shadow-lg group-hover:block">
+              <div className="absolute hidden w-full bg-white pt-4 shadow-lg group-hover:block">
                 {page.subItems.map((subItem) => (
-                  <div key={subItem.name} className="cursor-pointer p-4 font-serif hover:bg-gray-100">
+                  <div key={subItem.name} className="cursor-pointer p-4 font-serif text-sm hover:bg-gray-100">
                     {subItem.link ? <Link href={subItem.link}>{subItem.name}</Link> : <>{subItem.name}</>}
                   </div>
                 ))}
@@ -58,6 +58,23 @@ const Header = () => {
       </div>
     </header>
   );
+};
+
+const HeaderItem = ({ page }: { page: Page }) => {
+  const renderItem = () => (
+    <div className="relative mx-4 my-3">
+      {page.name}
+      <span
+        className="absolute block h-0.5 w-full scale-0 bg-red-200 transition duration-300 group-hover:scale-100"
+        aria-hidden="true"
+      />
+    </div>
+  );
+
+  if (page.link) {
+    return <Link href={page.link}>{renderItem()}</Link>;
+  }
+  return renderItem();
 };
 
 export default Header;
