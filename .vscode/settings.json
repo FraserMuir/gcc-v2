@@ -5,7 +5,6 @@
     "source.fixAll": "always"
   },
   "typescript.preferences.quoteStyle": "single",
-  "typescript.tsdk": "node_modules\\typescript\\lib",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.eol": "\n",
   "tailwindCSS.experimental.classRegex": [

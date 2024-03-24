@@ -1,5 +1,12 @@
+import { Navigation } from './navigation';
+
 const AdminPage = () => {
-  return <h1>Admin page</h1>;
+  return (
+    <div>
+      <h1>Admin</h1>
+      <Navigation />
+    </div>
+  );
 };
 
 export default AdminPage;

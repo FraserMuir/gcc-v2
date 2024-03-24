@@ -8,9 +8,9 @@ export const GCCTextLogo = () => {
   return (
     <div className="flex items-center gap-2">
       <GCCLogo width={54} height={54} />
-      <div className="flex flex-col">
-        <div className="font-serif uppercase tracking-widest">Garelochhead</div>
-        <div className="font-sans text-xs uppercase tracking-widest">Community Council</div>
+      <div className="hidden flex-col md:flex">
+        <div className="font-serif text-sm uppercase tracking-widest text-accent lg:text-base">Garelochhead</div>
+        <div className="font-sans text-2xs uppercase tracking-widest text-secondary lg:text-xs">Community Council</div>
       </div>
     </div>
   );

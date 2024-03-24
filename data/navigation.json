@@ -1,0 +1,26 @@
+{
+  "pages": [
+    {
+      "name": "Meetings",
+      "subItems": [
+        { "name": "Next Meeting", "link": "/next-meeting" },
+        { "name": "Historical Meetings", "link": "/historical-meetings" }
+      ]
+    },
+    {
+      "name": "Gallery",
+      "link": "/gallery"
+    },
+    {
+      "name": "Local Info",
+      "subItems": [
+        { "name": "Links", "link": "/links" },
+        { "name": "Events", "link": "/events" }
+      ]
+    },
+    {
+      "name": "News",
+      "link": "/news"
+    }
+  ]
+}

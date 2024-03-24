@@ -9,11 +9,12 @@
   "importOrder": [
     "^react$",
     "^react-dom",
+    "^next",
+    "",
     "<BUILT_IN_MODULES>",
     "<THIRD_PARTY_MODULES>",
     "",
-    "lib/",
-    "apps/",
+    "~/",
     "",
     "^[.]"
   ],
