@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import { type NavigationData, type NavPage, type NavSubItem } from '~/lib/navigation-data';
 
-export const Navigation = ({ navigationData }: { navigationData: NavigationData }) => {
+export const DesktopNavigation = ({ navigationData }: { navigationData: NavigationData }) => {
   const [openId, setOpenId] = useState<string>();
 
   const handleSelectPage = (item: NavPage) => setOpenId((prev) => (prev === item.name ? undefined : item.name));
@@ -24,7 +24,7 @@ export const Navigation = ({ navigationData }: { navigationData: NavigationData 
             onMouseEnter={() => handleSelectPage(page)}
             onMouseLeave={handleUnselectPage}
             onBlur={(e) => !e.currentTarget.contains(e.relatedTarget) && handleUnselectPage()}
-            className="group relative h-14 max-w-52 shrink grow basis-0 focus-within:bg-white hover:bg-white"
+            className="group relative h-[3.3rem] max-w-52 shrink grow basis-0 focus-within:bg-white hover:bg-white"
           >
             <NavItem page={page} onSelect={handleSelectPage} />
 

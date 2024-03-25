@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { fetchNavigationData } from '~/lib/navigation-data';
 
 import { GCCTextLogo } from './gcc-logo';
-import { Navigation } from './navigation';
+import { Navigation } from './navigation/navigation';
 import { SkipToContent } from './skip-to-content';
 
 export const Header = async () => {
