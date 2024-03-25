@@ -21,6 +21,7 @@ export const DesktopNavigation = ({ navigationData }: { navigationData: Navigati
         {navigationData.pages.map((page) => (
           <NavigationMenu.Item
             key={page.name}
+            onMouseDown={() => handleSelectPage(page)}
             onMouseEnter={() => handleSelectPage(page)}
             onMouseLeave={handleUnselectPage}
             onBlur={(e) => !e.currentTarget.contains(e.relatedTarget) && handleUnselectPage()}
@@ -78,11 +79,7 @@ const NavItem = ({ page, onSelect }: { page: NavPage; onSelect: (page: NavPage) 
     );
   }
   return (
-    <NavigationMenu.Trigger
-      className="absolute inset-0 z-10"
-      onClick={() => onSelect(page)}
-      onTouchStart={() => onSelect(page)}
-    >
+    <NavigationMenu.Trigger className="absolute inset-0 z-10" onClick={() => onSelect(page)}>
       {renderItem()}
     </NavigationMenu.Trigger>
   );
